@@ -1,22 +1,37 @@
 {
-  "name": "languaneprojectt",
+  "name": "lingopro",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:certificates": "node --test tests/certificates/pdf.test.mjs",
+    "test:payments": "node --test tests/payments/verification.test.mjs",
+    "test:ai-tutor": "node --test tests/ai-tutor/validation.test.mjs"
   },
   "dependencies": {
+    "@google/genai": "^3.0.0",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.10.1",
+    "lucide-react": "^1.70.0",
     "next": "16.4.5",
+    "pdf-lib": "^1.17.1",
+    "razorpay": "^2.9.8",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
+    "eslint": "^9.39.5",
     "eslint-config-next": "16.4.5",
     "tailwindcss": "^4"
   }

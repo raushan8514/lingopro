@@ -1,0 +1,77 @@
+.certificate-verification-page {
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+  padding: clamp(1rem, 5vw, 4rem);
+  background: var(--background);
+}
+
+.certificate-verification-card {
+  width: min(100%, 42rem);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--shadow-lg);
+}
+
+.certificate-verification-card > svg {
+  margin-bottom: 1rem;
+  color: var(--success);
+}
+
+.certificate-verification-card > svg.is-invalid,
+.certificate-verification-card > svg.is-revoked {
+  color: var(--destructive);
+}
+
+.certificate-verification-card h1 {
+  margin: 0.4rem 0 0.6rem;
+  color: var(--foreground);
+  font-size: clamp(1.7rem, 5vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.certificate-verification-card > p:not(.student-eyebrow) {
+  max-width: 38rem;
+  color: var(--muted-foreground);
+  line-height: 1.7;
+}
+
+.certificate-verification-card dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.7rem 0;
+  padding: 1.3rem 0;
+  border-block: 1px solid var(--border);
+}
+
+.certificate-verification-card dl div {
+  min-width: 0;
+}
+
+.certificate-verification-card dt {
+  color: var(--muted-foreground);
+  font-size: 0.78rem;
+}
+
+.certificate-verification-card dd {
+  overflow-wrap: anywhere;
+  margin: 0.35rem 0 0;
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.certificate-verification-card > a {
+  color: var(--primary);
+  font-weight: 650;
+  text-underline-offset: 0.2em;
+}
+
+@media (max-width: 480px) {
+  .certificate-verification-card dl {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
